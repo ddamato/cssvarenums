@@ -41,6 +41,13 @@ describe('cssvarenums', function () {
     expect(result.MY_VAR_1).to.equal('--my-var-1');
   });
 
+  it('should allow object destructuring', function () {
+    const css = `:host { --my-var-1: red }`;
+    const { MY_VAR_1, ...rest } = cssvarenums`<style>${css}</style>`;
+    expect(`${rest}`).to.equal('<style>:host { --my-var-1: red }</style>');
+    expect(MY_VAR_1).to.equal('--my-var-1');
+  });
+
   it('should find variable usage in given expression', function () {
     const css = `:host { color: var(--my-var-1, red); }`;
     const result = cssvarenums`<style>${css}</style>`;
