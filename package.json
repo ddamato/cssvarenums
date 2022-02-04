@@ -1,6 +1,6 @@
 {
   "name": "cssvarenums",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A template tag function which extracts CSS Custom Properties as JavaScript enums",
   "main": "index.js",
   "files": [
