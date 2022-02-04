@@ -26,7 +26,7 @@ Observe the following simple web component `.css` contents.
 }
 ```
 
-Note: the following `.js` file is not possible without a build step to import `.html` and `.css` files as text. Additionally, this is prepared as a CommonJS export, tooling is required to complete the ESM export shown below. I recommend [`rollup`](https://rollupjs.org) for both requirements but there are other options.
+Note: the following `.js` file is not possible without a build step to import `.html` and `.css` files as text. Additionally, this is prepared as a CommonJS export. Tooling is required to complete the ESM export shown below. I recommend [`rollup`](https://rollupjs.org) for both requirements but there are other options.
 
 ```js
 import html from './template.html';
